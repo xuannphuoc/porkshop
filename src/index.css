@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+  --color-forest: #153f34;
+  --color-forest-dark: #103128;
+  --color-cream: #fffaf3;
+  --color-sand: #f4eee4;
+  --color-orange: #cc784f;
+  --color-text: #203b32;
+  --font-sans: "Be Vietnam Pro", "DM Sans", Arial, sans-serif;
+}
+
+:root { font-family: "Be Vietnam Pro", Arial, sans-serif; color: #203b32; background: #fffdf9; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { text-decoration: none; }
+::selection { background: #d4e7d7; color: #103128; }
+.container-wide { max-width: 1280px; padding-left: 28px; padding-right: 28px; margin-left: auto; margin-right: auto; }
+.btn-main { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid #153f34; background: #153f34; color: #fff; font-weight: 700; border-radius: 13px; padding: 13px 22px; transition: background .2s, transform .2s; }
+.btn-main:hover { background: #215744; transform: translateY(-1px); }
+.btn-main:disabled { cursor: not-allowed; opacity: .5; transform: none; }
+.btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid #d4ddd5; background: white; color: #153f34; font-weight: 700; border-radius: 13px; padding: 13px 22px; transition: border .2s, background .2s; }
+.btn-outline:hover { border-color: #153f34; background: #f6faf4; }
+.field { width: 100%; border: 1px solid #dce3dd; border-radius: 12px; background: white; padding: 12px 14px; outline: none; color: #203b32; }
+.field:focus { border-color: #4a8566; box-shadow: 0 0 0 3px #dff0e2; }
+.eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: 11px; font-weight: 800; color: #b66e49; }
+.section-title { font-size: clamp(28px, 4vw, 42px); line-height: 1.27; font-weight: 800; letter-spacing: -.035em; }
+.card-lift { transition: transform .23s, box-shadow .23s; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(21,63,52,.08); }
+.photo-fallback { background: linear-gradient(145deg, #e9ebe0, #f8e9dd); }
+.prose-small { font-size: 13px; line-height: 1.8; color: #688077; }
+.soft-shadow { box-shadow: 0 12px 40px rgba(21,63,52,.07); }
+@media (max-width: 640px) { .container-wide { padding-left: 18px; padding-right: 18px; } }
+
+/* In phieu xac nhan: khong in menu, drawer hay footer. */
+@page { size: A4; margin: 15mm; }
+@media print {
+  body { background: #fff !important; }
+  body * { visibility: hidden !important; }
+  .invoice-document, .invoice-document * { visibility: visible !important; }
+  .invoice-document {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+  .invoice-document table { width: 100%; border-collapse: collapse; }
+  .invoice-document tr { break-inside: avoid; }
+  .no-print { display: none !important; }
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Server-side data: accounts, password hashes, sessions and customer orders
+server/data/
+.env
+.env.*
+!.env.example
